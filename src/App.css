@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    /* scroll-padding: 90px; */
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #434343;
+    background-image: linear-gradient(#434343, #282828);
+}

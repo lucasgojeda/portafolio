@@ -1,0 +1,171 @@
+.aboutContainer {
+    width: 100vw;
+    height: auto !important;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.ResumenContainer {
+    height: 25vh;
+    width: 100vw;
+    padding-left: 3vw;
+    font-size: 18px;
+    font-family: sans-serif;
+    line-height: 7.5vh;
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.ResumenContainer2 {
+    height: 25vh;
+    width: 100vw;
+    padding-left: 3vw;
+    font-size: 18px;
+    font-family: sans-serif;
+    line-height: 7.5vh;
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    .MuiSvgIcon-root {
+        margin-bottom: -5px;
+        margin-right: 2.5px;
+        color: #3498DB;
+    }
+}
+
+.textColorized {
+    color: #3498DB;
+    /* font: bolder; */
+    font-weight: 700;
+}
+
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .aboutContainer {
+        width: 100vw;
+        height: auto !important;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ResumenContainer {
+        height: auto;
+        width: 95vw;
+        // padding-left: 3vw;
+        margin-left: -2vw;
+        font-size: 18px;
+        font-family: sans-serif;
+        line-height: 7.5vh;
+        font-weight: 500;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+    }
+
+    .ResumenContainer2 {
+        height: auto;
+        width: 95vw;
+        // padding-left: 3vw;
+        margin-left: -2vw;
+        font-size: 18px;
+        font-family: sans-serif;
+        line-height: 7.5vh;
+        font-weight: 500;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+    }
+
+    li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+
+        span .MuiSvgIcon-root {
+            margin-bottom: -5px;
+            color: #3498DB;
+            display: inline-block;
+        }
+    }
+
+    .textColorized {
+        color: #3498DB;
+        /* font: bolder; */
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 600px) {
+    .aboutContainer {
+        width: 100vw;
+        height: auto !important;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden !important;
+    }
+
+    .ResumenContainer {
+        height: auto;
+        width: 92.5vw;
+        padding-left: 3vw;
+        font-size: 18px;
+        font-family: sans-serif;
+        line-height: 7.5vh;
+        font-weight: 500;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+    }
+
+    .ResumenContainer2 {
+        height: auto;
+        width: 92.5vw;
+        padding-left: 3vw;
+        font-size: 18px;
+        font-family: sans-serif;
+        line-height: 7.5vh;
+        font-weight: 500;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+    }
+
+    li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+
+        span .MuiSvgIcon-root {
+            margin-bottom: -5px;
+            color: #3498DB;
+            display: inline-block;
+        }
+    }
+
+    .textColorized {
+        color: #3498DB;
+        /* font: bolder; */
+        font-weight: 700;
+    }
+}
