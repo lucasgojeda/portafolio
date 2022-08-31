@@ -58,3 +58,32 @@ $color in $colors {
     --hover: #{adjust-hue($color, 45deg)};
   }
 }
+
+
+
+@media (max-width: 600px) {
+  .secundariasContainer {
+    width: 100vw;
+    height: 100vh;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+  }
+
+  .imagesContainerSecundarias {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    height: 100vh;
+  }
+
+  .imagesContainerSecundarias img {
+    max-height: 25vw;
+  }
+}

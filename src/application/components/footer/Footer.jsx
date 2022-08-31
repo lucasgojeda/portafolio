@@ -1,3 +1,8 @@
+import { useEffect } from "react";
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailIcon from '@mui/icons-material/Mail';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -8,6 +13,13 @@ import './Footer.scss';
 
 
 export const Footer = ({ position }) => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 2000
+        })
+        AOS.refresh();
+    }, []);
 
     return (
         <div className={(position === 'absolute') ? "footerContainerAbsolute" : "footerContainerRelative"}>

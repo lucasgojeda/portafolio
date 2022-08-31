@@ -5,17 +5,28 @@ import {
     Navigate,
 } from "react-router-dom";
 
-import { Navbar } from '../application/components/Navbar';
+import { Navbar } from '../application/components/navbar/Navbar';
 import { Inicio } from '../application/inicio/Inicio';
 import { Proyectos } from '../application/proyectos/Proyectos';
 import { About } from '../application/about/About';
 import { HomeScreen } from "../application/HomeScreen";
-import { Footer } from "../application/components/Footer";
+import { Footer } from "../application/components/footer/Footer";
+import { useState } from "react";
 
+import '../App.css';
+import { LoadingPage } from "../application/loading/LoadingPage";
 
 export const AppRouter = () => {
 
+    const [counter, setCounter] = useState(true)
 
+    setTimeout(() => {
+
+        setCounter(false);
+    }, 500);
+
+    if(counter) return <LoadingPage />
+    
     return (
 
         <BrowserRouter>

@@ -1,16 +1,30 @@
+import { useEffect } from "react";
 import { Typography } from "@mui/material"
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 
 import { Type } from "./Type"
-import { Footer } from "../components/Footer";
+import { Footer } from "../components/footer/Footer";
 
-import './Inicio.css';
+import './Inicio.scss';
+import { ArrowDown } from "../components/arrowDown/ArrowDown";
+
+const image = 'https://res.cloudinary.com/the-kings-company/image/upload/v1661787469/Portafolio/IMG_20220828_120501_331_sehi6d.webp';
 
 
-export const Inicio = () => {
+export const Inicio = ({ scrollToElement }) => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 2000
+        })
+        AOS.refresh();
+    }, []);
 
 
     const theme = useTheme();
@@ -34,7 +48,7 @@ export const Inicio = () => {
                 {
                     (!sm && !md)
                     &&
-                    <div className="containerTitleAndType">
+                    <div data-aos="zoom-in-down" className="containerTitleAndType">
                         <div className="containerTitle">
                             <Typography variant='p'>
                                 Ojeda Lucas Gabriel
@@ -49,14 +63,16 @@ export const Inicio = () => {
 
 
                 <div className="containerPicture">
-                    <AccountCircleIcon className="pictureIcon" />
+
+                    <img data-aos="zoom-in" src={image} />
+
                 </div>
 
 
                 {
                     (sm || md)
                     &&
-                    <div className="containerTitleAndType">
+                    <div data-aos="zoom-in-down" className="containerTitleAndType">
                         <div className="containerTitle">
                             <Typography variant='p'>
                                 Ojeda Lucas Gabriel
@@ -69,6 +85,16 @@ export const Inicio = () => {
                     </div>
                 }
 
+
+            </div>
+
+            <div>
+                <ArrowDown />
+            </div>
+
+            <div
+                onClick={scrollToElement}
+                className="arrowDownContainer">
 
             </div>
 

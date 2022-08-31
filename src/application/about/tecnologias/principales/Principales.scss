@@ -1,38 +1,30 @@
 .principalesContainer {
-    width: 100vw;
-    height: 40vh;
-    font-size: 18px;
-    font-weight: 600;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  width: 100vw;
+  height: 40vh;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.titleContainerPrimarias {
-    width: 100vw;
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // padding-left: 15px;
-}
 
 .imagesContainerPrimarias {
-    width: 100vw;
-    height: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    /* border: 1px solid #3498DB; */
-    background-color: rgb(0, 0, 0, 0.1);
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 1px solid #3498DB; */
+  background-color: rgb(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .imagesContainerPrimarias img {
-    max-height: 75px;
-    cursor: pointer;
-    width: auto;
+  max-height: 75px;
+  cursor: pointer;
+  width: auto;
 }
 
 
@@ -46,33 +38,47 @@
 
 //=== Set button colors
 // If you wonder why use Sass vars or CSS custom properties...
-  // Make a map with the class names and matching colors
-  $colors: (
-    raise: #3498DB, 
-  );
-  
-  // Sass variables compile to a static string; CSS variables are dynamic and inherited
-    // Loop through the map and set CSS custom properties using Sass variables
-  @each $button, $color in $colors {
-    .#{$button} {
-      --color: #{$color};
-      --hover: #{adjust-hue($color, 45deg)};
-    }
+// Make a map with the class names and matching colors
+$colors: (
+  raise: #3498DB,
+);
+
+// Sass variables compile to a static string; CSS variables are dynamic and inherited
+// Loop through the map and set CSS custom properties using Sass variables
+@each $button,
+$color in $colors {
+  .#{$button} {
+    --color: #{$color};
+    --hover: #{adjust-hue($color, 45deg)};
   }
-  
+}
 
 
 
 
-  @media (max-width: 600px) {
-    .principalesContainer {
-      width: 100vw;
-      height: 60vh;
-      font-size: 18px;
-      font-weight: 600;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+
+@media (max-width: 600px) {
+  .principalesContainer {
+    width: 100vw;
+    height: 100vh;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15vh;
   }
 
+  .imagesContainerPrimarias {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+    height: 100vh;
   }
+
+  .imagesContainerPrimarias img {
+    max-height: 25vw;
+  }
+}

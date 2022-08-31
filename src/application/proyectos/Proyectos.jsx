@@ -1,54 +1,57 @@
+import { useEffect } from "react";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-import { CardProyecto } from './components/CardProyecto';
-import { Footer } from '../components/Footer';
+import { CardProyect } from '../components/cardProyect/CardProyect';
+import { Footer } from '../components/footer/Footer';
 
 import appImage from './images/app.png';
 import './Proyectos.scss';
 import { Typography } from '@mui/material';
 
+import { data } from './data.js';
+
 
 export const Proyectos = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 2000
+        })
+        AOS.refresh();
+    }, []);
+
+    console.log(data)
+
+
     return (
         <div
             id='proyectos'
             className="proyectosContainer"
         >
 
-            <div className="titleContainerProyectos">
+            <div
+                data-aos="fade-in"
+                className="titleContainerProyectos">
                 <Typography variant='p'>
                     Proyectos
                 </Typography>
             </div>
 
-            <CardProyecto
-                img={appImage}
-                tecnologias={({ html: true, css: true, react: true, javascript: true })}
-                github="https://www.google.com/"
-                demo="https://www.facebook.com/"
-            />
 
-            <CardProyecto
-                img={appImage}
-                tecnologias={({ html: true, css: true, react: true, javascript: true })}
-                github="https://www.google.com/"
-                demo="https://www.facebook.com/"
-            />
-
-            <CardProyecto
-                img={appImage}
-                tecnologias={({ html: true, css: true, react: true, javascript: true })}
-                github="https://www.google.com/"
-                demo="https://www.facebook.com/"
-            />
-
-            <CardProyecto
-                img={appImage}
-                tecnologias={({ html: true, css: true, react: true, javascript: true })}
-                github="https://www.google.com/"
-                demo="https://www.facebook.com/"
-            />
-
+            {
+                data.map((e, i) =>
+                    <CardProyect
+                        key={i}
+                        title={e.title}
+                        img={e.img}
+                        description={e.description}
+                        tecnologias={e.tecnologias}
+                        github={e.github}
+                        demo={e.demo}
+                    />)
+            }
 
             <Footer />
 
