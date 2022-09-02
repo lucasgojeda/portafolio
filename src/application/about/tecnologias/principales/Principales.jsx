@@ -36,35 +36,45 @@ export const Principales = () => {
             <div className="imagesContainerPrimarias">
 
                 <Tooltip
-                    data-aos={ (sm) ? "fade-left" : "fade-right" }
+                    data-aos-offset="0"
+                    data-aos-duration="500"
+                    data-aos={(sm) ? "fade-left" : "fade-right"}
                     title="React Js"
                     arrow>
                     <img className="raise" src={react} />
                 </Tooltip>
 
                 <Tooltip
-                    data-aos={ (sm) ? "fade-right" : "fade-down-right" }
+                    data-aos-offset="0"
+                    data-aos-duration="500"
+                    data-aos={(sm) ? "fade-right" : "fade-down-right"}
                     title="Javascript"
                     arrow>
                     <img className="raise" src={javascript} />
                 </Tooltip>
 
                 <Tooltip
-                    data-aos={ (sm) ? "fade-left" : "fade-down" }
+                    data-aos-offset="0"
+                    data-aos-duration="500"
+                    data-aos={(sm) ? "fade-left" : "fade-down"}
                     title="CSS"
                     arrow>
                     <img className="raise" src={css} />
                 </Tooltip>
 
                 <Tooltip
-                    data-aos={ (sm) ? "fade-right" : "fade-down-right" }
+                    data-aos-offset="0"
+                    data-aos-duration="500"
+                    data-aos={(sm) ? "fade-right" : "fade-down-right"}
                     title="HTML"
                     arrow>
                     <img className="raise" src={html} />
                 </Tooltip>
 
                 <Tooltip
-                    data-aos={ (sm) ? "fade-left" : "fade-left" }
+                    data-aos-offset="0"
+                    data-aos-duration="500"
+                    data-aos={(sm) ? "fade-left" : "fade-left"}
                     title="GitHub"
                     arrow>
                     <img className="raise" src={git} />

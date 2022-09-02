@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { Typography } from "@mui/material"
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -48,7 +50,10 @@ export const Inicio = ({ scrollToElement }) => {
                 {
                     (!sm && !md)
                     &&
-                    <div data-aos="zoom-in-down" className="containerTitleAndType">
+                    <div
+                        data-aos-offset="0"
+                        data-aos-duration="500"
+                        data-aos="zoom-in-down" className="containerTitleAndType">
                         <div className="containerTitle">
                             <Typography variant='p'>
                                 Ojeda Lucas Gabriel
@@ -64,7 +69,21 @@ export const Inicio = ({ scrollToElement }) => {
 
                 <div className="containerPicture">
 
-                    <img data-aos="zoom-in" src={image} />
+                    <img
+                        data-aos-offset="0"
+                        data-aos-duration="500"
+                        data-aos="zoom-in"
+                        src={image} />
+
+                    <div
+                        data-aos-offset="0"
+                        data-aos-delay="500"
+                        data-aos-duration="500"
+                        data-aos="fade-right"
+                        data-aos-easing="ease-in-back"
+                        className='iconLinkedinContainer'>
+                        <LinkedInIcon />
+                    </div>
 
                 </div>
 
@@ -72,7 +91,10 @@ export const Inicio = ({ scrollToElement }) => {
                 {
                     (sm || md)
                     &&
-                    <div data-aos="zoom-in-down" className="containerTitleAndType">
+                    <div
+                        data-aos-offset="0"
+                        data-aos-duration="500"
+                        data-aos="zoom-in-down" className="containerTitleAndType">
                         <div className="containerTitle">
                             <Typography variant='p'>
                                 Ojeda Lucas Gabriel

@@ -32,22 +32,37 @@ export const Secundarias = () => {
     <div className='secundariasContainer'>
 
       <div data-aos="fade-in" className="titleContainerSecundarias">
-        <Typography variant='p'>
-          Cuento con conocimientos en
-        </Typography>
+        <h3>
+          Cuento con conocimientos
+          <div
+            data-aos="fade-right"
+            data-aos-offset="0"
+            data-aos-duration="500"
+            data-aos-delay="500"
+            className='subrayado'></div>
+        </h3>
       </div>
 
       <div className="imagesContainerSecundarias">
 
-        <Tooltip data-aos={ (sm) ? "fade-left" : "fade-right" } title="Node Js" arrow>
+        <Tooltip
+          data-aos-offset="0"
+          data-aos-duration="500"
+          data-aos={(sm) ? "fade-left" : "fade-right"} title="Node Js" arrow>
           <img className="raise" src={node} />
         </Tooltip>
 
-        <Tooltip data-aos={ (sm) ? "fade-right" : "fade-down" } title="Mongo DB" arrow>
+        <Tooltip
+          data-aos-offset="0"
+          data-aos-duration="500"
+          data-aos={(sm) ? "fade-right" : "fade-down"} title="Mongo DB" arrow>
           <img className="raise" src={mongoDB} />
         </Tooltip>
 
-        <Tooltip data-aos={ (sm) ? "fade-left" : "fade-left" } title="Material UI" arrow>
+        <Tooltip
+          data-aos-offset="0"
+          data-aos-duration="500"
+          data-aos={(sm) ? "fade-left" : "fade-left"} title="Material UI" arrow>
           <img className="raise" src={materialUI} />
         </Tooltip>
 

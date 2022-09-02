@@ -1,5 +1,5 @@
 .tecnologias {
-    width: 100%;
+    max-width: 55vw;
     height: 7.5vh;
     display: flex;
     justify-content: space-around;
@@ -24,7 +24,8 @@
 @media (min-width: 600px) and (max-width: 900px) {
 
     .tecnologias {
-        width: 70vw;
+        max-width: 100%;
+        width: 100%;
         height: 7.5vh;
         display: flex;
         justify-content: space-around;
@@ -35,7 +36,8 @@
 @media (min-width: 0px) and (max-width: 600px) {
 
     .tecnologias {
-        width: 100vw;
+        max-width: 100%;
+        width: 100%;
         height: 7.5vh;
         display: flex;
         justify-content: space-around;
@@ -46,7 +48,8 @@
 @media (min-width: 0px) and (max-width: 300px) {
     
     .tecnologias {
-        width: 100vw;
+        max-width: 100%;
+        width: 100%;
         height: 20vh;
         display: flex;
         flex-wrap: wrap;

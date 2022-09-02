@@ -16,6 +16,20 @@
   justify-content: center;
   align-items: center;
   // padding-left: 15px;
+
+  font-weight: 700;
+
+
+  h3 {
+    font-size: 22px;
+    overflow: hidden;
+
+    .subrayado {
+        height: 3px;
+        width: 100%;
+        background-color: #5DADE2;
+    }
+}
 }
 
 .imagesContainerSecundarias {
@@ -70,8 +84,11 @@ $color in $colors {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 15vh;
-    margin-bottom: 10vh;
+    margin-top: 5vh;
+
+    .titleContainerSecundarias {
+      height: 10%;
+    }
   }
 
   .imagesContainerSecundarias {
@@ -80,10 +97,10 @@ $color in $colors {
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: space-around;
-    height: 100vh;
+    height: 70vh;
   }
 
   .imagesContainerSecundarias img {
-    max-height: 25vw;
+    max-height: 15vw;
   }
 }

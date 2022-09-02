@@ -1,5 +1,5 @@
 .github-demo {
-    width: 100%;
+    max-width: 55vw;
     height: 7.5vh;
     display: flex;
     justify-content: space-around;
@@ -147,7 +147,8 @@ a {
 @media (min-width: 600px) and (max-width: 900px) {
 
     .github-demo {
-        width: 70vw;
+        max-width: 100%;
+        width: 100%;
         height: 7.5vh;
         display: flex;
         justify-content: space-around;
@@ -158,7 +159,8 @@ a {
 @media (min-width: 0px) and (max-width: 600px) {
 
     .github-demo {
-        width: 100vw;
+        max-width: 100%;
+        width: 100%;
         height: 7.5vh;
         display: flex;
         justify-content: space-around;

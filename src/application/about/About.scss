@@ -15,8 +15,23 @@
     justify-content: center;
     align-items: end;
     // padding-left: 15px;
-  }
-  
+
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+
+
+    h3 {
+        font-size: 22px;
+        overflow: hidden;
+
+        .subrayado {
+            height: 3px;
+            width: 100%;
+            background-color: #5DADE2;
+        }
+    }
+}
+
 
 .ResumenContainer {
     height: 25vh;
@@ -50,6 +65,9 @@ li {
     list-style: none;
     display: flex;
     align-items: center;
+
+    // font-size: 22px;
+    font-weight: 400;
 
     .MuiSvgIcon-root {
         margin-bottom: -5px;
@@ -132,6 +150,10 @@ li {
         display: flex;
         flex-direction: column;
         overflow-x: hidden !important;
+    }
+
+    .titleContainerPrimarias {
+        height: 5vh;
     }
 
     .ResumenContainer {

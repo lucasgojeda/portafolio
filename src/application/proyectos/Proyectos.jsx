@@ -32,11 +32,19 @@ export const Proyectos = () => {
         >
 
             <div
-                data-aos="fade-in"
-                className="titleContainerProyectos">
-                <Typography variant='p'>
+                className="titleContainerProyectos"
+            >
+                <h1
+                    data-aos-offset="0"
+                    data-aos-duration="500"
+                    data-aos="fade-in" className="title">
                     Proyectos
-                </Typography>
+                    <div
+                        data-aos-offset="0"
+                        data-aos-duration="500"
+                        data-aos-delay="500"
+                        data-aos="fade-right" className='subrayado'></div>
+                </h1>
             </div>
 
 
