@@ -9,9 +9,9 @@ import { useTheme } from '@mui/material/styles';
 import { CardImage } from './cardComponents/image/CardImage';
 import { Tecnologias } from "./cardComponents/tecnologias/Tecnologias";
 import { GithubAndDemoButtons } from "./cardComponents/github-demo/GithubAndDemoButtons";
+import { Description } from "./cardComponents/description/Description";
 
 import './CardProyect.scss';
-import { Description } from "./cardComponents/description/Description";
 
 
 export const CardProyect = ({ img, title, description, tecnologias, github, demo }) => {
@@ -26,37 +26,48 @@ export const CardProyect = ({ img, title, description, tecnologias, github, demo
     const theme = useTheme();
     const sm = useMediaQuery(theme.breakpoints.down('sm'));
     const md = useMediaQuery(theme.breakpoints.down('md'));
-    const xl = useMediaQuery(theme.breakpoints.down('xl'));
-    const lg = useMediaQuery(theme.breakpoints.down('lg'));
+
 
     return (
         <div
-            className="containerCardProyecto"
             data-aos="fade-right"
-            data-aos-offset="0"
-            data-aos-duration="500">
+            data-aos-offset={(!sm && !md) ? "300" : "0"}
+            data-aos-duration="1000"
+            data-aos-delay="500"
+
+            className="containerCardProyecto"
+        >
 
             <div className="firstContainer">
                 {
                     (sm || md)
                     &&
                     <div className='title'>
-                        <h3>
+
+                        <h3
+                            data-aos="fade-in"
+                            data-aos-easing="ease-in-back"
+                            data-aos-duration="500"
+                            data-aos-delay="500"
+                            data-aos-offset="300"
+                        >
                             {title}
                             <div
                                 className='subrayado'
                                 data-aos="fade-right"
                                 data-aos-easing="ease-in-back"
-                                data-aos-delay="500"
                                 data-aos-duration="500"
-                                data-aos-offset="0"
+                                data-aos-delay="600"
+                                data-aos-offset="300"
                             ></div>
                         </h3>
+
                     </div>
                 }
-                <CardImage img={img} />
-            </div>
 
+                <CardImage img={img} />
+
+            </div>
 
             <div className="secondContainer">
 
@@ -64,15 +75,22 @@ export const CardProyect = ({ img, title, description, tecnologias, github, demo
                     (!sm && !md)
                     &&
                     <div className='title'>
-                        <h3>
+                        <h3
+                            data-aos="fade-in"
+                            data-aos-easing="ease-in-back"
+                            data-aos-duration="500"
+                            data-aos-delay="500"
+                            data-aos-offset="300"
+                        >
                             {title}
                             <div
-                                className='subrayado'
                                 data-aos="fade-right"
                                 data-aos-easing="ease-in-back"
-                                data-aos-delay="500"
                                 data-aos-duration="500"
-                                data-aos-offset="0"
+                                data-aos-delay="600"
+                                data-aos-offset="300"
+
+                                className='subrayado'
                             ></div>
                         </h3>
                     </div>
@@ -83,7 +101,6 @@ export const CardProyect = ({ img, title, description, tecnologias, github, demo
                 <Tecnologias tecnologias={tecnologias} />
 
                 <GithubAndDemoButtons github={github} demo={demo} />
-
 
             </div>
 

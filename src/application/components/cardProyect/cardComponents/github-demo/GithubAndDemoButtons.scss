@@ -10,29 +10,6 @@ a {
     text-decoration: none;
 }
 
-// .github-demo button {
-//     font-size: 14px;
-//     background-color: transparent;
-//     color: #fff;
-//     padding: 7.5px;
-//     border: 1px solid #fff;
-//     border-radius: 3px;
-//     font-weight: 500;
-//     line-height: 1.2;
-//     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-//     cursor: pointer;
-//     display: flex;
-//     align-items: center;
-// }
-
-// .github-demo button:hover {
-//     border: 1px solid #3498DB;
-//     color: #3498DB;
-//     box-shadow: 2px 2px 2px 1px rgba(52, 152, 219, 0.2);
-// }
-
-
-
 .custom-btn {
     width: 130px;
     height: 40px;
@@ -46,15 +23,10 @@ a {
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
-    /* box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-        7px 7px 20px 0px rgba(0, 0, 0, .1),
-        4px 4px 5px 0px rgba(0, 0, 0, .1); */
     outline: none;
 }
 
 .btn-3 {
-    /* background: rgb(0, 172, 238);
-    background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%); */
     width: 130px;
     height: 40px;
     line-height: 42px;

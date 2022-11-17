@@ -3,11 +3,9 @@ import React, { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import DoneIcon from '@mui/icons-material/Done';
-
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import EastIcon from '@mui/icons-material/East';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 import './Description.scss';
 
@@ -21,20 +19,30 @@ export const Description = ({ description }) => {
         AOS.refresh();
     }, []);
 
+    const theme = useTheme();
+    const sm = useMediaQuery(theme.breakpoints.down('sm'));
+    const md = useMediaQuery(theme.breakpoints.down('md'));
+
+
     return (
         <div className="descripcion">
 
             <ul>
                 {
                     description.items.map((e, i) =>
-                        <li key={i}>
+                        <li
+                            key={i}
+                            data-aos="fade-left"
+                            data-aos-offset={(!sm && !md) ? "300" : "0"}
+                            data-aos-duration="500"
+                            data-aos-delay="800"
+                        >
                             <span>
                                 <span
                                     data-aos="fade-zoom-in"
-                                    data-aos-easing="ease-in-back"
-                                    data-aos-delay="25"
+                                    data-aos-offset={(!sm && !md) ? "300" : "0"}
                                     data-aos-duration="500"
-                                    data-aos-offset="0"
+                                    data-aos-delay="1900"
                                 >
                                     <KeyboardArrowRightIcon />
                                 </span>

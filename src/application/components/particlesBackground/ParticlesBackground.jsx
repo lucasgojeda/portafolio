@@ -1,11 +1,10 @@
-import React from 'react'
-
 import './ParticlesBackground.scss';
 
 
 export const ParticlesBackground = () => {
     return (
         <div>
+
             <div className="page-bg"></div>
 
             <div className="animation-wrapper">
@@ -15,8 +14,8 @@ export const ParticlesBackground = () => {
                 <div className="particle particle-4"></div>
             </div>
 
-            <div className="page-wrapper">
-            </div>
+            <div className="page-wrapper"></div>
+
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 
 import { About } from './about/About'
 import { Inicio } from './inicio/Inicio'
@@ -30,6 +30,7 @@ export const HomeScreen = () => {
       <Proyectos />
 
       <ParticlesBackground />
+
     </div>
   )
 }

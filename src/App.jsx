@@ -1,10 +1,10 @@
 import { AppRouter } from './router/AppRouter';
 
-import './App.css';
+import './App.scss';
 
 
-export const App = () => { 
-    return(
-            <AppRouter />
+export const App = () => {
+    return (
+        <AppRouter />
     );
 }; 

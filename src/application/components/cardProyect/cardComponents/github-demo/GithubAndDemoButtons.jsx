@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TerminalIcon from '@mui/icons-material/Terminal';
 
@@ -19,6 +18,7 @@ export const GithubAndDemoButtons = ({ github, demo }) => {
     AOS.refresh();
   }, []);
 
+
   return (
     <div className="github-demo">
 
@@ -26,13 +26,20 @@ export const GithubAndDemoButtons = ({ github, demo }) => {
         (github)
         &&
         <a href={github}>
+
           <button
             data-aos="fade-zoom-in"
             data-aos-easing="ease-in-back"
-            data-aos-delay="25"
             data-aos-offset="0"
             data-aos-duration="500"
-            className="custom-btn btn-3"><span><GitHubIcon /> Github</span></button>
+            data-aos-delay="1600"
+
+
+            className="custom-btn btn-3"
+          >
+            <span><GitHubIcon /> Github</span>
+          </button>
+
         </a>
       }
 
@@ -40,13 +47,20 @@ export const GithubAndDemoButtons = ({ github, demo }) => {
         (demo)
         &&
         <a href={demo}>
+
           <button
             data-aos="fade-zoom-in"
             data-aos-easing="ease-in-back"
-            data-aos-delay="25"
             data-aos-offset="0"
             data-aos-duration="500"
-            className="custom-btn btn-3"><span><TerminalIcon /> Demo</span></button>
+            data-aos-delay="1800"
+
+
+            className="custom-btn btn-3"
+          >
+            <span><TerminalIcon /> Demo</span>
+          </button>
+
         </a>
       }
 

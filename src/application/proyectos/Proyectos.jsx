@@ -6,11 +6,9 @@ import 'aos/dist/aos.css';
 import { CardProyect } from '../components/cardProyect/CardProyect';
 import { Footer } from '../components/footer/Footer';
 
-import appImage from './images/app.png';
-import './Proyectos.scss';
-import { Typography } from '@mui/material';
-
 import { data } from './data.js';
+
+import './Proyectos.scss';
 
 
 export const Proyectos = () => {
@@ -22,8 +20,6 @@ export const Proyectos = () => {
         AOS.refresh();
     }, []);
 
-    console.log(data)
-
 
     return (
         <div
@@ -34,17 +30,26 @@ export const Proyectos = () => {
             <div
                 className="titleContainerProyectos"
             >
+
                 <h1
                     data-aos-offset="0"
                     data-aos-duration="500"
-                    data-aos="fade-in" className="title">
-                    Proyectos
+                    data-aos-delay="500"
+                    data-aos="fade-in"
+
+                    className="title"
+                >
+                    Mis proyectos
                     <div
                         data-aos-offset="0"
                         data-aos-duration="500"
                         data-aos-delay="500"
-                        data-aos="fade-right" className='subrayado'></div>
+                        data-aos="fade-right"
+
+                        className='subrayado'
+                    ></div>
                 </h1>
+
             </div>
 
 

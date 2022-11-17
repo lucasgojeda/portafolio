@@ -1,23 +1,23 @@
 import { useEffect } from "react";
-import { Typography } from "@mui/material"
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import DownloadIcon from '@mui/icons-material/Download';
+import { Typography } from "@mui/material"
 
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 
 import { Type } from "./Type"
-import { Footer } from "../components/footer/Footer";
-
-import './Inicio.scss';
 import { ArrowDown } from "../components/arrowDown/ArrowDown";
 
-const image = 'https://res.cloudinary.com/the-kings-company/image/upload/v1661787469/Portafolio/IMG_20220828_120501_331_sehi6d.webp';
+import cv from '../../assets/LucasGabrielOjeda-CV.pdf';
 
+import './Inicio.scss';
+
+const image = 'https://res.cloudinary.com/the-kings-company/image/upload/v1661787469/Portafolio/IMG_20220828_120501_331_sehi6d.webp';
 
 export const Inicio = ({ scrollToElement }) => {
 
@@ -28,24 +28,45 @@ export const Inicio = ({ scrollToElement }) => {
         AOS.refresh();
     }, []);
 
-
     const theme = useTheme();
     const sm = useMediaQuery(theme.breakpoints.down('sm'));
     const md = useMediaQuery(theme.breakpoints.down('md'));
-    const xl = useMediaQuery(theme.breakpoints.down('xl'));
-    const lg = useMediaQuery(theme.breakpoints.down('lg'));
 
-
-    // console.log('sm', sm)
-    // console.log('md', md)
-    // console.log('xl', xl)
-    // console.log('lg', lg)
 
     return (
         <div className="container">
 
-            <div className="containerTitleAndPicture">
+            <a href={cv} target="_blank" rel="noopener noreferrer" download="Lucas Gabriel Ojeda - CV.pdf"> 
+                <div className='cvContainer'>
 
+                    <DownloadIcon
+                        data-aos-offset="0"
+                        data-aos-duration="500"
+                        data-aos-delay="550"
+                        data-aos="fade-down"
+                    />
+
+                    <h3
+                        data-aos-offset="0"
+                        data-aos-duration="500"
+                        data-aos-delay="500"
+                        data-aos="fade-in"
+                    >Curriculúm
+                        <div
+                            data-aos-offset="0"
+                            data-aos-duration="500"
+                            data-aos-delay="600"
+                            data-aos="fade-left"
+
+                            className='subrayado'
+                        >
+                        </div>
+
+                    </h3>
+                </div>
+            </a>
+
+            <div className="containerTitleAndPicture">
 
                 {
                     (!sm && !md)
@@ -53,19 +74,23 @@ export const Inicio = ({ scrollToElement }) => {
                     <div
                         data-aos-offset="0"
                         data-aos-duration="500"
-                        data-aos="zoom-in-down" className="containerTitleAndType">
+                        data-aos="zoom-in-down"
+
+                        className="containerTitleAndType"
+                    >
+
                         <div className="containerTitle">
                             <Typography variant='p'>
-                                Ojeda Lucas Gabriel
+                                Lucas Gabriel Ojeda
                             </Typography>
                         </div>
 
                         <div className="containerType">
                             <Type />
                         </div>
+
                     </div>
                 }
-
 
                 <div className="containerPicture">
 
@@ -73,7 +98,9 @@ export const Inicio = ({ scrollToElement }) => {
                         data-aos-offset="0"
                         data-aos-duration="500"
                         data-aos="zoom-in"
-                        src={image} />
+
+                        src={image}
+                    />
 
                     <div
                         data-aos-offset="0"
@@ -81,12 +108,18 @@ export const Inicio = ({ scrollToElement }) => {
                         data-aos-duration="500"
                         data-aos="fade-right"
                         data-aos-easing="ease-in-back"
-                        className='iconLinkedinContainer'>
-                        <LinkedInIcon />
+
+                        className='iconLinkedinContainer'
+                    >
+                        <a
+                            href='https://www.linkedin.com/in/lucas-ojeda-a03372225/'
+                            target="_blank"
+                        >
+                            <LinkedInIcon />
+                        </a>
                     </div>
 
                 </div>
-
 
                 {
                     (sm || md)
@@ -94,10 +127,14 @@ export const Inicio = ({ scrollToElement }) => {
                     <div
                         data-aos-offset="0"
                         data-aos-duration="500"
-                        data-aos="zoom-in-down" className="containerTitleAndType">
+                        data-aos-delay="500"
+                        data-aos="zoom-in-down"
+
+                        className="containerTitleAndType"
+                    >
                         <div className="containerTitle">
                             <Typography variant='p'>
-                                Ojeda Lucas Gabriel
+                                Lucas Gabriel Ojeda
                             </Typography>
                         </div>
 
@@ -107,22 +144,22 @@ export const Inicio = ({ scrollToElement }) => {
                     </div>
                 }
 
-
             </div>
 
             <div>
-                <ArrowDown />
+                <ArrowDown
+                    data-aos-offset="0"
+                    data-aos-duration="500"
+                    data-aos-delay="500"
+                    data-aos="fade-in"
+                />
             </div>
 
             <div
                 onClick={scrollToElement}
-                className="arrowDownContainer">
-
+                className="arrowDownContainer"
+            >
             </div>
-
-
-
-            {/* <Footer position='absolute' /> */}
 
         </div>
     )

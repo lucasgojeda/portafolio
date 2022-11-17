@@ -1,7 +1,10 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 import './Tecnologias.scss';
 
@@ -15,48 +18,93 @@ export const Tecnologias = ({ tecnologias }) => {
         AOS.refresh();
     }, []);
 
+    const theme = useTheme();
+    const sm = useMediaQuery(theme.breakpoints.down('sm'));
+    const md = useMediaQuery(theme.breakpoints.down('md'));
+
     return (
         <div className="tecnologias">
 
             {
-                (tecnologias?.html) && <button
+                (tecnologias?.react) && <button
                     data-aos="fade-zoom-in"
                     data-aos-easing="ease-in-back"
-                    data-aos-delay="25"
+                    data-aos-offset={(!sm && !md) ? "150" : "0"}
                     data-aos-duration="500"
-                    data-aos-offset="0"
-                >Html</button>
-            }
-
-            {
-                (tecnologias?.css) && <button
-                    data-aos="fade-zoom-in"
-                    data-aos-easing="ease-in-back"
-                    data-aos-delay="25"
-                    data-aos-duration="500"
-                    data-aos-offset="0"
-                >Css</button>
+                    data-aos-delay="900"
+                >React</button>
             }
 
             {
                 (tecnologias?.javascript) && <button
                     data-aos="fade-zoom-in"
                     data-aos-easing="ease-in-back"
-                    data-aos-delay="25"
+                    data-aos-offset={(!sm && !md) ? "150" : "0"}
                     data-aos-duration="500"
-                    data-aos-offset="0"
+                    data-aos-delay="1000"
                 >Javascript</button>
             }
 
             {
-                (tecnologias?.react) && <button
+                (tecnologias?.css) && <button
                     data-aos="fade-zoom-in"
                     data-aos-easing="ease-in-back"
-                    data-aos-delay="25"
+                    data-aos-offset={(!sm && !md) ? "150" : "0"}
                     data-aos-duration="500"
-                    data-aos-offset="0"
-                >React</button>
+                    data-aos-delay="1100"
+                >Css</button>
             }
+
+            {
+                (tecnologias?.sass) && <button
+                    data-aos="fade-zoom-in"
+                    data-aos-easing="ease-in-back"
+                    data-aos-offset={(!sm && !md) ? "150" : "0"}
+                    data-aos-duration="500"
+                    data-aos-delay="1100"
+                >Sass</button>
+            }
+
+            {
+                (tecnologias?.html) && <button
+                    data-aos="fade-zoom-in"
+                    data-aos-easing="ease-in-back"
+                    data-aos-offset={(!sm && !md) ? "150" : "0"}
+                    data-aos-duration="500"
+                    data-aos-delay="1200"
+                >Html</button>
+            }
+
+            {
+                (tecnologias?.node) && <button
+                    data-aos="fade-zoom-in"
+                    data-aos-easing="ease-in-back"
+                    data-aos-offset={(!sm && !md) ? "150" : "0"}
+                    data-aos-duration="500"
+                    data-aos-delay="1300"
+                >Node</button>
+            }
+
+            {
+                (tecnologias?.express) && <button
+                    data-aos="fade-zoom-in"
+                    data-aos-easing="ease-in-back"
+                    data-aos-offset={(!sm && !md) ? "150" : "0"}
+                    data-aos-duration="500"
+                    data-aos-delay="1400"
+                >Express</button>
+            }
+
+            {
+                (tecnologias?.mongoDb) && <button
+                    data-aos="fade-zoom-in"
+                    data-aos-easing="ease-in-back"
+                    data-aos-offset={(!sm && !md) ? "150" : "0"}
+                    data-aos-duration="500"
+                    data-aos-delay="1500"
+                >MongoDb</button>
+            }
+
 
         </div>
     )
