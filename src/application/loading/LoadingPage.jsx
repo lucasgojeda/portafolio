@@ -1,5 +1,5 @@
 import { ParticlesBackground } from '../components/particlesBackground/ParticlesBackground'
-import { SpinnerLoading } from '../components/spinnerLoading/spinnerLoading'
+import { SpinnerLoading } from '../components/spinnerLoading/SpinnerLoading'
 
 import './LoadingPage.scss';
 
