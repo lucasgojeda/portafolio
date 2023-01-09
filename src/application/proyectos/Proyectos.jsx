@@ -39,7 +39,7 @@ export const Proyectos = () => {
 
                     className="title"
                 >
-                    Mis proyectos
+                    My projects
                     <div
                         data-aos-offset="0"
                         data-aos-duration="500"

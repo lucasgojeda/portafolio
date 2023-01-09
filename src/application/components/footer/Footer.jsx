@@ -28,7 +28,7 @@ export const Footer = ({ position }) => {
             className={(position === 'absolute') ? "footerContainerAbsolute" : "footerContainerRelative"}
         >
 
-            <p>Contacto</p>
+            <p>Contact</p>
 
             <div className="iconContainer">
 
@@ -61,7 +61,7 @@ export const Footer = ({ position }) => {
                 </a>
 
                 <a
-                    href='https://www.instagram.com/lucasgojeda/'
+                    href='https://www.instagram.com/lucass_ojedaa/'
                     target="_blank"
                 >
                     <InstagramIcon className="icons raise" />

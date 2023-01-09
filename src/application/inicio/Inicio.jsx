@@ -13,7 +13,7 @@ import { useTheme } from '@mui/material/styles';
 import { Type } from "./Type"
 import { ArrowDown } from "../components/arrowDown/ArrowDown";
 
-import cv from '../../assets/LucasGabrielOjeda-CV.pdf';
+import cv from '../../assets/LucasGabrielOjeda.pdf';
 
 import './Inicio.scss';
 
@@ -36,7 +36,7 @@ export const Inicio = ({ scrollToElement }) => {
     return (
         <div className="container">
 
-            <a href={cv} target="_blank" rel="noopener noreferrer" download="Lucas Gabriel Ojeda - CV.pdf"> 
+            <a href={cv} target="_blank" rel="noopener noreferrer" download="Lucas Gabriel Ojeda - Resume.pdf"> 
                 <div className='cvContainer'>
 
                     <DownloadIcon
@@ -51,7 +51,7 @@ export const Inicio = ({ scrollToElement }) => {
                         data-aos-duration="500"
                         data-aos-delay="500"
                         data-aos="fade-in"
-                    >Curriculúm
+                    >Resume
                         <div
                             data-aos-offset="0"
                             data-aos-duration="500"

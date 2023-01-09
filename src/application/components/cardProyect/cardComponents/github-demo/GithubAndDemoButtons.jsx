@@ -25,7 +25,7 @@ export const GithubAndDemoButtons = ({ github, demo }) => {
       {
         (github)
         &&
-        <a href={github}>
+        <a href={github} target="_blank">
 
           <button
             data-aos="fade-zoom-in"
@@ -46,7 +46,7 @@ export const GithubAndDemoButtons = ({ github, demo }) => {
       {
         (demo)
         &&
-        <a href={demo}>
+        <a href={demo} target="_blank">
 
           <button
             data-aos="fade-zoom-in"

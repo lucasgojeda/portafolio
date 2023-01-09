@@ -32,7 +32,7 @@ export const About = () => {
                     data-aos-delay="500"
                     data-aos="fade-in"
                 >
-                    Me enfoco en
+                    I'm focus on
                     <div
                         data-aos-offset="0"
                         data-aos-duration="500"
@@ -59,7 +59,7 @@ export const About = () => {
                         data-aos-delay="700"
                         data-aos="fade-right"
                     >
-                        <span><DoubleArrowIcon />Llevo más de <span className="textColorized"> un año </span> aprendiendo y practicando desarrollo web en forma autodidacta.</span>
+                        <span><DoubleArrowIcon />I have been learning and practicing web development in a self-taught way for almost <span className="textColorized"> two years</span>.</span>
                     </li>
 
                     <li
@@ -69,7 +69,7 @@ export const About = () => {
                         data-aos-delay="600"
                         data-aos="fade-right"
                     >
-                        <span><DoubleArrowIcon />Estoy interesado en seguir haciendo cursos enfocados a mejorar como <span className="textColorized">frontend developer</span>.</span>
+                        <span><DoubleArrowIcon />I am interested in continuing to do courses focused on improving as a <span className="textColorized">frontend developer</span>.</span>
                     </li>
 
                     <li
@@ -78,7 +78,7 @@ export const About = () => {
                         data-aos-delay="500"
                         data-aos="fade-right"
                     >
-                        <span><DoubleArrowIcon />Tengo un nivel de <span className="textColorized">inglés</span> bueno en lo relacionado a leer documentación en dicho idioma.</span>
+                        <span><DoubleArrowIcon />I have conversational <span className="textColorized">English</span>.</span>
                     </li>
 
                 </ul>

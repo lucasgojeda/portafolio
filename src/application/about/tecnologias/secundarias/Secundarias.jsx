@@ -38,7 +38,7 @@ export const Secundarias = () => {
           data-aos-delay="500"
           data-aos="fade-in"
         >
-          Cuento con conocimientos en
+          I have knowledge in
           <div
             data-aos="fade-right"
             data-aos-offset="0"
