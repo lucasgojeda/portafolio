@@ -69,7 +69,7 @@ export const About = () => {
                         data-aos-delay="600"
                         data-aos="fade-right"
                     >
-                        <span><DoubleArrowIcon />I am interested in continuing to do courses focused on improving as a <span className="textColorized">frontend developer</span>.</span>
+                        <span><DoubleArrowIcon />I am interested in continuing to do courses focused on improving as a <span className="textColorized">fullstack developer</span>.</span>
                     </li>
 
                     <li

@@ -6,7 +6,7 @@ export const Type = () => {
       options={{
 
         strings: [
-          "React developer",
+          "FullStack developer (MERN)",
         ],
         autoStart: true,
         loop: true,
